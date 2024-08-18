@@ -1,0 +1,23 @@
+#Notacion 8: Setters y Getters.
+
+class Persona:
+    def __init__(self,nombre, edad):
+        self.__nombre=nombre
+        self._edad=edad
+
+    def get_nombre(self):
+        return self.__nombre #esto es un getter, en resumen es una forma de obtener el atributo privado o super privado de un codigo
+
+    def set_nombre(self, new_nombre):
+        self.__nombre=new_nombre #set es un modulo quepermite agregar diferentes tipos de modificaciones al atributo de una clase privada.
+
+print("-------------------------------------------------------------")
+dalto=Persona("Lucas",21)
+print(dalto._edad) #Asi no se deberia de acceder a un archivo privado.
+print("-------------------------------------------------------------")
+nombre=dalto.get_nombre()
+print(nombre)
+print("-------------------------------------------------------------")
+dalto.set_nombre("Pepito_kun")
+nombre =dalto.get_nombre()
+print(nombre)
